@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Member from './Member';
 
 class MembersList extends React.Component {
@@ -16,7 +16,7 @@ class MembersList extends React.Component {
       return (<Member passedMember={member} allMembers={this.state.members} key={member.id} />)
     });
     return (
-      <div className="">
+      <div>
         {memberNode}
       </div>
     );

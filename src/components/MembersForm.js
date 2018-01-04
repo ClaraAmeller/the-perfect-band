@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MembersList from './MembersList';
 
 window.id = 0;
@@ -30,7 +30,6 @@ class MembersForm extends React.Component {
             this.addMember([name.value, role.value]);
             name.value = '';
             role.value = '';
-            return false;
           }}>
             +
           </a>
