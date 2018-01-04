@@ -23,16 +23,18 @@ class MembersForm extends React.Component {
     let name, role;
     return (
       <div>
-        <input placeholder="Name" ref={node => {name = node; }} />
-        <input placeholder="Role" ref={node => {role = node; }} />
-        <button onClick={() => {
-          this.addMember([name.value, role.value]);
-          name.value = '';
-          role.value = '';
-          return false;
-        }}>
-          +
-        </button>
+        <form className="form-inline">
+          <input className="form-control mr-1" placeholder="Name" ref={node => {name = node; }} />
+          <input className="form-control mr-1" placeholder="Role" ref={node => {role = node; }} />
+          <a className="btn btn-default" onClick={() => {
+            this.addMember([name.value, role.value]);
+            name.value = '';
+            role.value = '';
+            return false;
+          }}>
+            +
+          </a>
+        </form>
         <MembersList passedMembers={this.state.members}/>
       </div>
     );

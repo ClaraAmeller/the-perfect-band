@@ -54,7 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>The Perfect Band</h1>
+        <h1 className="text-center">The Perfect Band</h1>
         <Title />
         <MembersForm />
       </div>

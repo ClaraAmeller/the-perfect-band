@@ -16,7 +16,7 @@ class MembersList extends React.Component {
       return (<Member passedMember={member} allMembers={this.state.members} key={member.id} />)
     });
     return (
-      <div>
+      <div className="">
         {memberNode}
       </div>
     );

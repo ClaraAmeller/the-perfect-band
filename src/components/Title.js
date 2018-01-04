@@ -15,14 +15,12 @@ class Title extends React.Component {
     render() {
       let input;
       return (
-        <div>
-          <form onMouseLeave={(e) => {
-            e.preventDefault();
-            this.renameBand(input.value);
-          }}>
-            <input type='text' placeholder='Your band name' ref={node => {input = node}} />
-          </form>
-        </div>
+        <form className="form my-3" onMouseLeave={(e) => {
+          e.preventDefault();
+          this.renameBand(input.value);
+        }}>
+          <input type='text' className="form-control" placeholder='Your band name' ref={node => {input = node}} />
+        </form>
       );
     }
 }
