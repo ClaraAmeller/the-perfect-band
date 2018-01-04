@@ -17,7 +17,6 @@ class MembersForm extends React.Component {
     this.state.members.push({id: window.id, name: member[0], role: member[1]});
     this.setState({members: this.state.members}); 
     window.id++;
-    console.log(this.state.members);
   }
 
   render() {
@@ -30,6 +29,7 @@ class MembersForm extends React.Component {
           this.addMember([name.value, role.value]);
           name.value = '';
           role.value = '';
+          return false;
         }}>
           +
         </button>

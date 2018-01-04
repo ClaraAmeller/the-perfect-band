@@ -4,7 +4,8 @@ class Member extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            member: this.props.passedMember
+            member: this.props.passedMember,
+            members: this.props.allMembers
         }
         this.removeMember = this.removeMember.bind(this);
     }
@@ -12,11 +13,13 @@ class Member extends React.Component {
     // Handle remove
     removeMember(memberId) {
         console.log('id ', memberId);
-        /* const remainder = this.state.members.filter((member) => {
-            // if(member.id !== id) return member;
+  /*       const remainder = this.state.members.filter((member) => {
+            if (member.id !== memberId) return member;
             console.log(member);
-        }); */
-        // this.setState({members: remainder});
+        });
+        this.setState({members: remainder});
+        return false; */
+        // console.log('Member', this.state.member);
     }
 
     render() {

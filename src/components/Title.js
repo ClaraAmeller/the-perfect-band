@@ -10,7 +10,6 @@ class Title extends React.Component {
     // Name band handler
     renameBand(val) {
       this.setState({title: val});
-      console.log('Band', val);
     }
 
     render() {
