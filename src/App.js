@@ -1,18 +1,65 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { render } from 'react-dom';
 
-class App extends Component {
+import Title from './components/Title';
+import MembersForm from './components/MembersForm';
+import MembersList from './components/MembersList';
+
+// Member id
+window.id = 0;
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      band: '',
+      members: []
+    }
+    this.apiUrl = 'http://localhost:3000'
+  }
+
+  componentDidMount() {
+    /* axios.get(this.apiUrl)
+      .then((res) => {
+        this.setState({members:res.members});
+      });
+      console.log(this.state.members); */
+  }
+
+  // Name band handler
+/*   renameBand(val) {
+    console.log(val);
+    const band = {text: val};
+    axios.post(this.apiUrl, band)
+      .then((res) => {
+        this.setState({band: band});
+      });
+  } */
+
+  // Add todo handler
+/*   addMember(val) {
+    const member = {text: val}
+      this.state.members.push(member);
+      this.setState({members: this.state.members});
+  } */
+
+  // Handle remove
+/*   removeMember(id) {
+    const remainder = this.state.members.filter((member) => {
+      if(member.id !== id) return member;
+    });
+    this.setState({members: remainder});
+  } */
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>The Perfect Band</h1>
+        <Title />
+        <MembersForm />
+        <MembersList
+          members={this.state.members}
+        />
       </div>
     );
   }
