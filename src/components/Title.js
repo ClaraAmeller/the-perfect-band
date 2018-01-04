@@ -16,12 +16,14 @@ class Title extends React.Component {
     render() {
       let input;
       return (
-        <form onMouseLeave={(e) => {
-          e.preventDefault();
-          this.renameBand(input.value);
-        }}>
-          <input type='text' placeholder='Your band name' ref={node => {input = node}} />
-        </form>
+        <div>
+          <form onMouseLeave={(e) => {
+            e.preventDefault();
+            this.renameBand(input.value);
+          }}>
+            <input type='text' placeholder='Your band name' ref={node => {input = node}} />
+          </form>
+        </div>
       );
     }
 }

@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import Member from './Member';
 
-const MembersList = ({members}) => {
+class MembersList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      members: this.props.passedMembers
+    };
+  }
+
+  render() {
     // Map through the members
-    console.log('members', members);
-    const memberNode = members.map((member) => {
-      console.log(member);
-      return (<Member member={this.setState.member({member})} />)
+    const memberNode = this.state.members.map((member) => {
+      return (<Member passedMember={member} key={member.id} />)
     });
-    return (<ul>{memberNode}</ul>);
+    return (
+      <div>
+        {memberNode}
+      </div>
+    );
+  }
 }
 
 export default MembersList;

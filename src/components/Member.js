@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 
-/* const Member = ({member, remove}) => {
-    // Each Member
-    return (
-        <li onClick={(removeMember(member.id))}>{member.text}</li>
-    );
-}
- */
-
 class Member extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            member: this.member
+            member: this.props.passedMember
         }
         this.removeMember = this.removeMember.bind(this);
     }
@@ -30,7 +22,10 @@ class Member extends React.Component {
     render() {
         // Each Member
         return (
-            <li onClick={(this.removeMember(this.member.id))}>{this.member.text}</li>
+            <div>
+                <span>{this.state.member.name} on {this.state.member.role}</span>
+                <button onClick={(this.removeMember(this.state.member.id))}>x</button>
+            </div>
         );
     }
 }

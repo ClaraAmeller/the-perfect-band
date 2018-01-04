@@ -57,9 +57,6 @@ class App extends React.Component {
         <h1>The Perfect Band</h1>
         <Title />
         <MembersForm />
-        <MembersList
-          members={this.state.members}
-        />
       </div>
     );
   }

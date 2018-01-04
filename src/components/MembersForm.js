@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MembersList from './MembersList';
 
 window.id = 0;
 
@@ -32,6 +33,7 @@ class MembersForm extends React.Component {
         }}>
           +
         </button>
+        <MembersList passedMembers={this.state.members}/>
       </div>
     );
   }
