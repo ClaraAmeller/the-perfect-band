@@ -26,7 +26,7 @@ class Member extends React.Component {
         // Each Member
         return (
             <div className="text-center m-3">
-                <span>{this.state.member.name} on {this.state.member.role}</span>
+                <span>{this.state.member.name} <strong>on</strong> {this.state.member.role}</span>
                 {/* <button className="btn btn-danger" onClick={(this.removeMember(this.state.member.id))}>x</button> */}
             </div>
         );
