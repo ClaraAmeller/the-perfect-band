@@ -37,6 +37,7 @@ class MembersForm extends React.Component {
     name.value = '';
     role.value = '';
     this.setState({role: 'Role'});
+    name.focus();
   }
 
   // Add member handler
@@ -54,10 +55,10 @@ class MembersForm extends React.Component {
       <form>
         <div className='form-inline' href=''>
           <input className={this.state.empty ? 'is-invalid form-control mr-1' : 'form-control mr-1'}
-            placeholder='Name' ref={input => {this.name = input; }} 
+            placeholder='Name' ref={input => {this.name = input; }}
           />
-          <select value={this.state.role} 
-            className={this.state.empty ? 'is-invalid custom-select form-control mr-1' : 'custom-select form-control mr-1'} 
+          <select value={this.state.role}
+            className={this.state.empty ? 'is-invalid custom-select form-control mr-1' : 'custom-select form-control mr-1'}
             ref={input => {this.role = input; }} onChange={this.updateRole} >
             <option value='Role'>Role</option>
             <option value='Singer'>Singer</option>
