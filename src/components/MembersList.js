@@ -12,8 +12,7 @@ class MembersList extends React.Component {
   render() {
     // Map through the members
     const memberNode = this.state.members.map((member) => {
-      /* Note: Improve */
-      return (<Member passedMember={member} allMembers={this.state.members} key={member.id} />)
+      return (<Member passedMember={member} key={member.id} />)
     });
     return (
       <div>
