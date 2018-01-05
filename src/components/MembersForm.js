@@ -50,16 +50,15 @@ class MembersForm extends React.Component {
   }
 
   render() {
-    let name, role;
     return (
-      <div>
-        <form className="form-inline">
+      <form>
+        <div className='form-inline' href=''>
           <input className={this.state.empty ? 'is-invalid form-control mr-1' : 'form-control mr-1'}
-            placeholder="Name" ref={node => {name = node; }} 
+            placeholder='Name' ref={input => {this.name = input; }} 
           />
           <select value={this.state.role} 
             className={this.state.empty ? 'is-invalid custom-select form-control mr-1' : 'custom-select form-control mr-1'} 
-            ref={node => {role = node; }} onChange={this.updateRole} >
+            ref={input => {this.role = input; }} onChange={this.updateRole} >
             <option value='Role'>Role</option>
             <option value='Singer'>Singer</option>
             <option value='Bass'>Bass</option>
@@ -67,12 +66,12 @@ class MembersForm extends React.Component {
             <option value='Piano'>Piano</option>
             <option value='Tambourine'>Tambourine</option>
           </select>
-          <a className="btn btn-default" onClick={() => {
-            this.addMember(name, role)
-          }}>+</a>
-        </form>
+          <button type='button' className='btn btn-default' onClick={() => {
+            this.addMember(this.name, this.role)
+          }}>+</button>
+        </div>
         <MembersList passedMembers={this.state.members} />
-      </div>
+      </form>
     );
   }
 }

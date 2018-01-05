@@ -11,7 +11,7 @@ class Member extends React.Component {
     render() {
         return (
             // Each Member            
-            <div className="text-center m-3">
+            <div className='text-center m-3'>
                 <span>{this.state.member.name} <strong>on</strong> {this.state.member.role}</span>
             </div>
         );
