@@ -3,8 +3,6 @@ import MembersList from './MembersList';
 
 // Member
 window.id = 0;
-window.name;
-window.role;
 
 class MembersForm extends React.Component {
 
