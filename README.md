@@ -1,6 +1,6 @@
 # The Perfect Band
 
-## This project is done with React.js
+## This project is made with React.js
 
 ### How to execute it
 
